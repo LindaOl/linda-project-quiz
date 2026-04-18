@@ -25,10 +25,10 @@
         },
         {
             "number": 3,
-            "question": "What type of exersice do you prefere",
+            "question": "What type of exercise do you prefere?",
             "answers": [
                 "Running",
-                "Classes as the gym",
+                "Classes at the gym",
                 "Strenght",
                 "Crossfit",
                 "Powerwalks",
@@ -38,7 +38,7 @@
         },
         {
             "number": 4,
-            "question": "When do you fins it easier to exercise?",
+            "question": "When do you find it easier to exercise?",
             "answers": [
                 "Summer",
                 "Autumn",
