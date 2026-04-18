@@ -1,6 +1,6 @@
 export const Comments = ({ comment, setComment }) => {
     return (
-        <div className="commentField">
+        <div className="comment-field">
             <h2>Comments:</h2>
 
             <textarea

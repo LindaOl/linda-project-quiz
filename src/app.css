@@ -157,12 +157,12 @@ article h3 {
 }
 
 
-.commentField h2 {
+.comment-field h2 {
     padding-bottom: 5px;
 }
 
 
-.commentField textarea {
+.comment-field textarea {
     width: 100%;
     height: 150px;
     padding: 10px;
@@ -353,7 +353,6 @@ button {
 
     .app-wrapper {
         background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
-
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 75%;

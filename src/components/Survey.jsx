@@ -31,6 +31,7 @@ export const Survey = ({
                         <div className="alternativeAnswer" key={index}>
                             <label>
                                 <input
+                                    required
                                     type="radio"
                                     name={`question-${item.number}`}
                                     value={answer}
