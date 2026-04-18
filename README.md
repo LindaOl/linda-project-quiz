@@ -17,7 +17,7 @@
 
 
 # What could I change or work on more?
-- Deviding the code into more .jsx files.
+- Deviding the code into more components.
 - For practice purposes i could have other form elements, but design-wise i didn't want to clutter it more.
 
 

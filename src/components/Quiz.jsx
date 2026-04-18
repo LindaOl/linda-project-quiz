@@ -1,13 +1,15 @@
 import quizData from "../quiz.json";
 import { useState } from "react";
 
+import { Survey } from "./Survey";
+import { Answers } from "./Answers";
 import { Submit } from "./Submit";
-import { Comments } from "./Comments";
-import { Dropdown } from "./Dropdown";
+import { Edit } from "./Edit";
 
 
 export const Quiz = () => {
     const quizInfo = quizData.quiz;
+
     const [gender, setGender] = useState("");
     const [answered, setAnswered] = useState({});
     const [comment, setComment] = useState("");
@@ -31,34 +33,21 @@ export const Quiz = () => {
     if (isSubmitted) {
         return (
             <section className="summary-box">
+                <div className="summary">
+                    <div className="submitted-title">
+                        <h1>Thank you for your answers!</h1>
+                    </div>
 
-                <h1>Thank you for your answers!</h1>
+                    <Answers
+                        quizInfo={quizInfo}
+                        gender={gender}
+                        answered={answered}
+                        comment={comment}
+                    />
 
-                <section className="summary-wrapper">
+                    <Edit />
 
-                    <article>
-                        <h2>Gender</h2>
-                        <p>{gender || "No selection"}</p>
-                    </article>
-
-                    {quizInfo.map((item) => (
-                        <article key={item.number}>
-                            <h2>Question {item.number}</h2>
-                            <p>{item.question}</p>
-                            <p>Your answer: {answered[item.number] || "No answer given"}</p>
-                        </article>
-                    ))}
-
-                    <article>
-                        <h2>Comments</h2>
-                        <p>{comment ? comment : "No comment submitted."}</p>
-                    </article>
-
-                </section>
-
-                <button onClick={() => setIsSubmitted(false)}>Edit answers</button>
-
-
+                </div>
             </section>
         );
 
@@ -68,48 +57,15 @@ export const Quiz = () => {
     return (
         <div className="survey">
             <form className="quiz-wrapper" onSubmit={handleSubmit}>
-                <section className="quiz">
-
-                    <Dropdown gender={gender} setGender={setGender} />
-
-                    {quizInfo.map((item) => (
-                        <article key={item.number} className="question-wrapper">
-
-
-
-                            <h2>
-                                Question {item.number}
-                            </h2>
-                            <h3>
-                                {item.question}
-                            </h3>
-
-                            {item.answers.map((answer, index) => (
-                                <div className="alternativeAnswer" key={index}>
-                                    <label>
-                                        <input
-                                            type="radio"
-                                            name={`question-${item.number}`}
-                                            value={answer}
-                                            onChange={() =>
-                                                setAnswered((prev) => ({
-                                                    ...prev,
-                                                    [item.number]: answer,
-                                                }))
-                                            }
-                                            checked={answered[item.number] === answer}
-                                        />
-                                        {answer}
-                                    </label>
-                                </div>
-                            ))}
-                        </article>
-                    ))}
-
-                    <article>
-                        <Comments comment={comment} setComment={setComment} />
-                    </article>
-                </section>
+                <Survey
+                    quizInfo={quizInfo}
+                    gender={gender}
+                    setGender={setGender}
+                    answered={answered}
+                    setAnswered={setAnswered}
+                    comment={comment}
+                    setComment={setComment}
+                />
 
                 <Submit />
             </form>

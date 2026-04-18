@@ -26,6 +26,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   font-size: 0.8rem;
+  margin: 0;
 }
 
 code {

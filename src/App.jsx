@@ -11,6 +11,4 @@ export const App = () => {
     <Quiz />
 
   </div>
-
-
-}
+};

@@ -6,7 +6,7 @@ export const Comments = ({ comment, setComment }) => {
             <textarea
                 onChange={(event) => setComment(event.target.value)}
                 value={comment}
-                placeholder="Write your thoughts here..."
+                placeholder="Enter comments here..."
             />
         </div>
     );
