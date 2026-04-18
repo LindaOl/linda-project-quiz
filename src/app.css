@@ -5,7 +5,9 @@ header {
     width: 100%;
     align-items: center;
     height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+            rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)),
+        url("/images/yoga-mat.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 25% 75%;
@@ -26,7 +28,6 @@ header {
     box-shadow:
         0 5px 6px rgba(0, 0, 0, 0.116),
         0 1px 6px rgba(0, 0, 0, 0.459);
-
 }
 
 
@@ -46,7 +47,7 @@ header {
     align-items: center;
     width: 100%;
     background-color: var(--background-color);
-    border-radius: 15% 15% / 10px 10px;
+    border-radius: 15% 15% 0 0/ 10px 10px;
     /*align over header*/
     margin-top: -10px;
     padding-top: 20px;
@@ -210,7 +211,7 @@ button {
 }
 
 
-/*Media query for tablet, 668px - 1023px*/
+/*Media query for tablet, 668px - 1279px, PORTRAIT*/
 @media screen and (min-width: 668px) and (max-width: 1279px) and (orientation: portrait) {
     h1 {
         font-size: 2.3rem;
@@ -228,7 +229,10 @@ button {
 
 
     .app-wrapper {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+                rgba(0, 0, 0, 0.555),
+                rgba(0, 0, 0, 0.11)),
+            url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 75%;
@@ -239,7 +243,11 @@ button {
 
 
     header {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
+        background: linear-gradient(rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0.699),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0));
     }
 
     .survey {
@@ -251,6 +259,7 @@ button {
     .quiz-wrapper,
     .summary-box {
         width: 60%;
+        border-radius: 5px;
     }
 
 
@@ -267,9 +276,14 @@ button {
 }
 
 
+/*Media query for tablet, 668px - 1180px, LANDSCAPE*/
 @media screen and (min-width: 668px) and (max-width: 1180px) and (orientation: landscape) {
     header {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
+        background: linear-gradient(rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0.699),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0));
     }
 
     .app-wrapper {
@@ -317,7 +331,10 @@ button {
 
 
     .app-wrapper {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+                rgba(0, 0, 0, 0.555),
+                rgba(0, 0, 0, 0.11)),
+            url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 90%;
@@ -358,7 +375,10 @@ button {
 
 
     .app-wrapper {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+                rgba(0, 0, 0, 0.555),
+                rgba(0, 0, 0, 0.11)),
+            url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 75% 75%;
@@ -369,7 +389,11 @@ button {
 
 
     header {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
+        background: linear-gradient(rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0.699),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0));
     }
 
 
