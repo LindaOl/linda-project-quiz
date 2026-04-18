@@ -10,23 +10,17 @@ import { Edit } from "./Edit";
 export const Quiz = () => {
     const quizInfo = quizData.quiz;
 
+    /*useState*/
     const [gender, setGender] = useState("");
     const [answered, setAnswered] = useState({});
     const [comment, setComment] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
 
 
-    {/*CONSOLE LOG, REMOVE ON DEPLOYMENT*/ }
-    console.log("Current state:", answered);
-    console.log("Current comment:", comment);
-
-    {/*Handles the prevention of the  default submit*/ }
+    /*Handles the prevention of the default submit, set State to setIsSubmitted*/
     const handleSubmit = (event) => {
         event.preventDefault();
         setIsSubmitted(true);
-        console.log("Submitted answers:", answered);
-        console.log("Gender:", gender);
-
     };
 
     /*If the form has been submitted, show only a summary page*/
@@ -45,7 +39,7 @@ export const Quiz = () => {
                         comment={comment}
                     />
 
-                    <Edit />
+                    <Edit setIsSubmitted={setIsSubmitted} />
 
                 </div>
             </section>
