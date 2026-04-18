@@ -5,10 +5,10 @@ header {
     width: 100%;
     align-items: center;
     height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/kettlebells.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 25% 90%;
+    background-position: 25% 75%;
     padding-bottom: 2em;
     padding-top: 1em;
 }
@@ -16,7 +16,7 @@ header {
 
 /*Styling for both summary and survey*/
 .quiz-wrapper,
-.summary {
+.summary-box {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -31,7 +31,7 @@ header {
 
 
 .quiz,
-.summary-wrapper {
+.summary {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -222,12 +222,13 @@ button {
 
 
     .app-wrapper {
-        background-image: url("/images/weights.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 25% 90%;
+        background-position: 25% 75%;
         padding-bottom: 2em;
         padding-top: 1em;
+        min-height: 100vh;
     }
 
 
@@ -235,27 +236,34 @@ button {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
     }
 
+    .survey {
+        border-radius: 0;
+        background: none;
+    }
 
-    .survey,
+
+    .quiz-wrapper,
     .summary-box {
         width: 60%;
-        border-radius: 5px;
     }
 
 
     .summary-box h1 {
         font-size: 1.8rem;
     }
+
+
+    .quiz,
+    .summary {
+        padding: 2em 0;
+        border-radius: 5px;
+    }
 }
 
-@media screen and (min-width: 668px) and (max-width: 1180px) and (orientation: landscape) {
 
+@media screen and (min-width: 668px) and (max-width: 1180px) and (orientation: landscape) {
     header {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
-    }
-
-    .summary-box {
-        border-radius: 5px;
     }
 
 
@@ -267,18 +275,16 @@ button {
     }
 
 
-    .quiz-wrapper {
+    .quiz-wrapper,
+    .summary-box {
         width: 100%;
     }
 
 
-    .quiz {
+    .quiz,
+    .summary {
         padding: 2em 0;
-    }
-
-
-    .summary-box {
-        width: 60%;
+        border-radius: 5px;
     }
 }
 
@@ -301,8 +307,8 @@ button {
 
 
     .app-wrapper {
-        background-image: url("/images/weights.jpg");
-        background-size: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 90%;
         padding-bottom: 2em;
@@ -315,8 +321,10 @@ button {
     }
 
 
-    .summary-box {
+    .summary-box,
+    .quiz-wrapper {
         border-radius: 5px;
+        background-color: white;
     }
 }
 
@@ -345,6 +353,7 @@ button {
         background-position: 25% 90%;
         padding-bottom: 2em;
         padding-top: 1em;
+        height: 100%;
     }
 
 
@@ -363,19 +372,17 @@ button {
     }
 
 
-    .quiz-wrapper {
-        width: 30%;
-    }
-
-
-    .quiz {
+    .quiz,
+    .summary {
         width: 90%;
     }
 
 
+    .quiz-wrapper,
     .summary-box {
         width: 30%;
         border-radius: 5px;
+        background-color: white;
     }
 
 
