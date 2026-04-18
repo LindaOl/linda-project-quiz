@@ -352,10 +352,11 @@ button {
 
 
     .app-wrapper {
-        background: linear-gradient(#0006, #0006), url("/images/weights.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 25% 90%;
+        background-position: 25% 75%;
         padding-bottom: 2em;
         padding-top: 1em;
         min-height: 100vh;
