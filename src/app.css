@@ -266,6 +266,10 @@ button {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
     }
 
+    .app-wrapper {
+        min-height: 100vh;
+    }
+
 
     .survey {
         width: 60%;
@@ -313,6 +317,7 @@ button {
         background-position: 25% 90%;
         padding-bottom: 2em;
         padding-top: 1em;
+        min-height: 100vh;
     }
 
 
@@ -353,7 +358,7 @@ button {
         background-position: 25% 90%;
         padding-bottom: 2em;
         padding-top: 1em;
-        height: 100%;
+        min-height: 100vh;
     }
 
 
