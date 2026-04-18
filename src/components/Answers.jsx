@@ -1,4 +1,4 @@
-export const Answers = ({ quizInfo, gender, answered, comment }) => {
+export const Answers = ({ quizInfo, gender, answered, comment, otherAnswer }) => {
 
     return (
         <section className="summary-wrapper">
@@ -12,7 +12,13 @@ export const Answers = ({ quizInfo, gender, answered, comment }) => {
                 <article key={item.number}>
                     <h2>Question {item.number}</h2>
                     <p>{item.question}</p>
-                    <p>Your answer: {answered[item.number] || "No answer given"}</p>
+                    <p>
+                        Your answer: {
+                            answered[item.number] === "Other" && item.number === 3
+                                ? otherAnswer || "Other"
+                                : answered[item.number] || "No answer given"
+                        }
+                    </p>
                 </article>
             ))}
 

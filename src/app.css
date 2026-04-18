@@ -5,7 +5,7 @@ header {
     width: 100%;
     align-items: center;
     height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 25% 75%;
@@ -149,10 +149,16 @@ article h3 {
     border-bottom: 2px solid var(--header-color);
 }
 
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
 
 /*Comments*/
 .comment-wrapper,
-.commentField {
+.comment-field {
     width: 100%;
 }
 
@@ -222,7 +228,7 @@ button {
 
 
     .app-wrapper {
-        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 75%;
@@ -311,7 +317,7 @@ button {
 
 
     .app-wrapper {
-        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 90%;
@@ -352,10 +358,10 @@ button {
 
 
     .app-wrapper {
-        background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/weights.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)), url("/images/yoga-mat.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 25% 75%;
+        background-position: 75% 75%;
         padding-bottom: 2em;
         padding-top: 1em;
         min-height: 100vh;

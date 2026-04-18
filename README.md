@@ -8,6 +8,7 @@
 - Created a Quiz.jsx file and made the general layout.
 - Used the courses approach for the form elements and using useState, and also used the web to find solutions.
 - Added styling.
+- Added things like validation, conditioned removel or additions to the servey.
 
 
 # Tools

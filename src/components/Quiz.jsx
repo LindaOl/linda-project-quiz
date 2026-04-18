@@ -14,14 +14,34 @@ export const Quiz = () => {
     const [gender, setGender] = useState("");
     const [answered, setAnswered] = useState({});
     const [comment, setComment] = useState("");
+    const [otherAnswer, setOtherAnswer] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [showErrors, setShowErrors] = useState(false);
 
 
-    /*Handles the prevention of the default submit, set State to setIsSubmitted*/
+    /*Handles the prevention of the default submit, set State to setIsSubmitted. If no answer, show an error msg*/
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        const stopEarly = answered[1] === "Never";
+
+        const questionsToValidate = stopEarly
+            ? quizInfo.filter((item) => item.number === 1)
+            : quizInfo;
+
+        const allAnswered = questionsToValidate.every(
+            (item) => answered[item.number]
+        );
+
+        if (!allAnswered) {
+            setShowErrors(true);
+            return;
+        }
+
+        setShowErrors(false);
         setIsSubmitted(true);
     };
+
 
     /*If the form has been submitted, show only a summary page*/
     if (isSubmitted) {
@@ -37,6 +57,7 @@ export const Quiz = () => {
                         gender={gender}
                         answered={answered}
                         comment={comment}
+                        otherAnswer={otherAnswer}
                     />
 
                     <Edit setIsSubmitted={setIsSubmitted} />
@@ -59,6 +80,10 @@ export const Quiz = () => {
                     setAnswered={setAnswered}
                     comment={comment}
                     setComment={setComment}
+                    otherAnswer={otherAnswer}
+                    setOtherAnswer={setOtherAnswer}
+                    isSubmitted={isSubmitted}
+                    showErrors={showErrors}
                 />
 
                 <Submit />
