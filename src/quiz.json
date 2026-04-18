@@ -1,0 +1,50 @@
+{
+    "quiz": [
+        {
+            "number": 1,
+            "question": "How often do you exersise?",
+            "answers": [
+                "Daily",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ]
+        },
+        {
+            "number": 2,
+            "question": "Whats your favorite music to listen to?",
+            "answers": [
+                "Rock",
+                "Pop",
+                "Classical",
+                "Hip-hop",
+                "I make a bmp playlist",
+                "I prefere silence",
+                "None of the above"
+            ]
+        },
+        {
+            "number": 3,
+            "question": "What type of exersice do you prefere",
+            "answers": [
+                "Running",
+                "Classes as the gym",
+                "Strenght",
+                "Crossfit",
+                "Powerwalks",
+                "Yoga",
+                "Home workouts"
+            ]
+        },
+        {
+            "number": 4,
+            "question": "When do you fins it easier to exercise?",
+            "answers": [
+                "Summer",
+                "Autumn",
+                "Winter",
+                "Spring"
+            ]
+        }
+    ]
+}
