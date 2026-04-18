@@ -62,10 +62,35 @@ header {
     z-index: 2;
 }
 
+
 .gender-selection {
     padding: 15px 0;
-
+    width: 100%;
 }
+
+
+.gender-selection select {
+    min-width: 30%;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+    font-size: 0.7rem;
+    font-family: inherit;
+    color: var(--text-color);
+}
+
+
+.gender-selection select:focus {
+    outline: none;
+    border-color: var(--header-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.gender-selection select option {
+    font-size: 0.7rem;
+}
+
 
 .question-wrapper {
     display: flex;
@@ -110,6 +135,12 @@ header {
 .commentField {
     width: 100%;
 }
+
+
+.commentField h2 {
+    padding-bottom: 5px;
+}
+
 
 .commentField textarea {
     width: 100%;
@@ -235,10 +266,20 @@ button {
 
 /* Desktop: 1024px and larger */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    h1 {}
+    h1 {
+        font-size: 3rem;
+    }
 
 
-    h2 {}
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    h3 {
+        font-size: 1rem;
+    }
+
 
     .app-wrapper {
         background-image: url("/images/weights.jpg");
@@ -249,19 +290,28 @@ button {
         padding-top: 1em;
     }
 
+
+    .gender-selection select {
+        font-size: 1rem;
+    }
 }
 
 
 /* Desktop: 1280px and larger */
 @media screen and (min-width: 1280px) {
-    h1 {}
+    h1 {
+        font-size: 3rem;
+    }
 
 
-    h2 {}
+    h2 {
+        font-size: 1.5rem;
+    }
 
 
-    h3 {}
-
+    h3 {
+        font-size: 1rem;
+    }
 
 
     .app-wrapper {
@@ -280,13 +330,21 @@ button {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0));
     }
 
+
     .survey {
         background: none;
     }
 
+
+    .gender-selection select {
+        font-size: 1rem;
+    }
+
+
     .quiz-wrapper {
         width: 30%;
     }
+
 
     .quiz {
         width: 90%;

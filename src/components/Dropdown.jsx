@@ -5,7 +5,7 @@ export const Dropdown = ({ gender, setGender }) => {
                 onChange={(event) => setGender(event.target.value)}
                 value={gender}
             >
-                <option value="">Gender</option>
+                <option value="" disabled>Select gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
