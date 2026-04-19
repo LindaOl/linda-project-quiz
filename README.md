@@ -22,4 +22,5 @@
 - For practice purposes i could have other form elements, but design-wise i didn't want to clutter it more.
 
 
-## [Website](https://fitness-survey.netlify.app/)
+## [Website Netlify](https://fitness-survey.netlify.app/)
+## [Website Cloudflare](https://project-survey.linda-e-olsen.workers.dev/)
