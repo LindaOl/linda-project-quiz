@@ -46,24 +46,26 @@ export const Quiz = () => {
     /*If the form has been submitted, show only a summary page*/
     if (isSubmitted) {
         return (
-            <section className="summary-box">
-                <div className="summary">
-                    <div className="submitted-title">
-                        <h1>Thank you for your answers!</h1>
+            <div className="survey">
+                <section className="summary-box">
+                    <div className="summary">
+                        <div className="submitted-title">
+                            <h1>Thank you for your answers!</h1>
+                        </div>
+
+                        <Answers
+                            quizInfo={quizInfo}
+                            gender={gender}
+                            answered={answered}
+                            comment={comment}
+                            otherAnswer={otherAnswer}
+                        />
+
+                        <Edit setIsSubmitted={setIsSubmitted} />
+
                     </div>
-
-                    <Answers
-                        quizInfo={quizInfo}
-                        gender={gender}
-                        answered={answered}
-                        comment={comment}
-                        otherAnswer={otherAnswer}
-                    />
-
-                    <Edit setIsSubmitted={setIsSubmitted} />
-
-                </div>
-            </section>
+                </section>
+            </div>
         );
 
         /* ELSE show the survey*/

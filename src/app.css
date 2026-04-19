@@ -6,7 +6,8 @@ header {
     align-items: center;
     height: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.11),
-            rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.11)),
+            rgba(0, 0, 0, 0.555),
+            rgba(0, 0, 0, 0.11)),
         url("/images/yoga-mat.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -17,17 +18,33 @@ header {
 
 
 /*Styling for both summary and survey*/
+.survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: 15% 15% 0 0 / 10px 10px;
+    /*align over header*/
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
 .quiz-wrapper,
 .summary-box {
     display: flex;
     flex-direction: column;
-    width: 90%;
     background-color: white;
     align-items: center;
-    border-radius: 24px 24px;
+    width: 90%;
     box-shadow:
-        0 5px 6px rgba(0, 0, 0, 0.116),
-        0 1px 6px rgba(0, 0, 0, 0.459);
+        0 5px 6px rgba(0, 0, 0, 0.075),
+        0 1px 6px rgba(0, 0, 0, 0.075);
+    border-radius: 24px;
 }
 
 
@@ -40,20 +57,14 @@ header {
 }
 
 
-.survey,
-.summary-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: var(--background-color);
-    border-radius: 15% 15% 0 0/ 10px 10px;
-    /*align over header*/
-    margin-top: -10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    z-index: 2;
+.summary-box h1 {
+    color: var(--text-color);
+    margin: 0.7em;
+}
+
+
+.submitted-title {
+    text-align: center;
 }
 
 
@@ -81,7 +92,6 @@ article h3 {
     margin-top: 0;
     color: var(--text-color);
     border: none;
-
 }
 
 
@@ -118,14 +128,26 @@ article h3 {
 .question-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 5px;
+}
+
+
+/*Custom color on the selected radio button*/
+input[type="radio"] {
+    accent-color: var(--button);
+    cursor: pointer;
+}
+
+
+input[type="radio"]:focus {
+    outline: 2px solid var(--header-color);
+    outline-offset: 2px;
 }
 
 
 .alternativeAnswer {
     display: flex;
     flex-direction: column;
-
 }
 
 
@@ -150,6 +172,7 @@ article h3 {
     border-bottom: 2px solid var(--header-color);
 }
 
+
 .error {
     color: red;
     font-size: 0.9rem;
@@ -171,11 +194,13 @@ article h3 {
 
 .comment-field textarea {
     width: 100%;
-    height: 150px;
+    height: 100px;
     padding: 10px;
     resize: vertical;
-    /* optional: user can resize */
     font-family: inherit;
+    border: 1px solid #c9c9c9;
+    background-color: var(--survey-bg);
+    border-radius: 5px;
 }
 
 
@@ -200,14 +225,143 @@ button {
 
 
 /*SUMMARY*/
-.submitted-title {
-    text-align: center;
+.summary-wrapper article:not(:last-child)::after {
+    border-bottom: 2px solid var(--header-color);
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 1rem 0 0.5rem 0;
 }
 
 
-.summary-box h1 {
-    color: var(--text-color);
-    margin: 0.7em;
+/* Desktop: 1024px and larger */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    h3 {
+        font-size: 1rem;
+    }
+
+
+    .app-wrapper {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+                rgba(0, 0, 0, 0.555),
+                rgba(0, 0, 0, 0.11)),
+            url("/images/yoga-mat.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 25% 90%;
+        padding-bottom: 2em;
+        padding-top: 1em;
+        min-height: 100vh;
+    }
+
+
+    .gender-selection select {
+        font-size: 1rem;
+    }
+
+
+    .survey {
+        background: none;
+    }
+
+
+    .quiz-wrapper,
+    .summary-box {
+        width: 70%;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+
+    .quiz,
+    .summary {
+        padding: 2em 0;
+    }
+}
+
+
+/* Desktop: 1280px and larger */
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .quiz-wrapper h3 {
+        margin: 0.9em 0 0.3em 0;
+    }
+
+
+    header {
+        background: linear-gradient(rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0.699),
+                rgba(0, 0, 0, 0.514),
+                rgba(0, 0, 0, 0));
+    }
+
+
+    .app-wrapper {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
+                rgba(0, 0, 0, 0.555),
+                rgba(0, 0, 0, 0.11)),
+            url("/images/yoga-mat.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 75% 75%;
+        padding-bottom: 2em;
+        padding-top: 1em;
+        min-height: 100vh;
+    }
+
+
+    .survey {
+        background: none;
+        width: 30%;
+    }
+
+
+    .gender-selection select {
+        font-size: 1rem;
+    }
+
+
+    .quiz-wrapper,
+    .summary-box {
+        width: 100%;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+
+    .quiz,
+    .summary {
+        width: 90%;
+    }
+
+
+    button {
+        margin-top: 1em;
+    }
 }
 
 
@@ -250,6 +404,7 @@ button {
                 rgba(0, 0, 0, 0));
     }
 
+
     .survey {
         border-radius: 0;
         background: none;
@@ -258,13 +413,8 @@ button {
 
     .quiz-wrapper,
     .summary-box {
-        width: 60%;
+        width: 80%;
         border-radius: 5px;
-    }
-
-
-    .summary-box h1 {
-        font-size: 1.8rem;
     }
 
 
@@ -272,6 +422,11 @@ button {
     .summary {
         padding: 2em 0;
         border-radius: 5px;
+    }
+
+
+    .summary-box h1 {
+        font-size: 1.8rem;
     }
 }
 
@@ -286,6 +441,7 @@ button {
                 rgba(0, 0, 0, 0));
     }
 
+
     .app-wrapper {
         min-height: 100vh;
     }
@@ -294,7 +450,6 @@ button {
     .survey {
         width: 60%;
         border-radius: 0;
-        border-radius: 24px;
         background: none;
     }
 
@@ -302,6 +457,7 @@ button {
     .quiz-wrapper,
     .summary-box {
         width: 100%;
+        border-radius: 5px;
     }
 
 
@@ -313,115 +469,44 @@ button {
 }
 
 
-/* Desktop: 1024px and larger */
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-
-    h3 {
-        font-size: 1rem;
-    }
-
-
-    .app-wrapper {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
-                rgba(0, 0, 0, 0.555),
-                rgba(0, 0, 0, 0.11)),
-            url("/images/yoga-mat.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 25% 90%;
-        padding-bottom: 2em;
-        padding-top: 1em;
-        min-height: 100vh;
-    }
-
-
-    .gender-selection select {
-        font-size: 1rem;
-    }
-
-
-    .summary-box,
-    .quiz-wrapper {
-        border-radius: 5px;
-        background-color: white;
-    }
-}
-
-
-/* Desktop: 1280px and larger */
-@media screen and (min-width: 1280px) {
-    h1 {
-        font-size: 2.4rem;
-    }
-
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-
-    h3 {
-        font-size: 1rem;
-    }
-
-
-    .app-wrapper {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.11),
-                rgba(0, 0, 0, 0.555),
-                rgba(0, 0, 0, 0.11)),
-            url("/images/yoga-mat.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 75% 75%;
-        padding-bottom: 2em;
-        padding-top: 1em;
-        min-height: 100vh;
-    }
-
-
-    header {
-        background: linear-gradient(rgba(0, 0, 0, 0),
-                rgba(0, 0, 0, 0.514),
-                rgba(0, 0, 0, 0.699),
-                rgba(0, 0, 0, 0.514),
-                rgba(0, 0, 0, 0));
-    }
-
-
+/*Media query for IPAD PRO*/
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape),
+screen and (width: 1024px) and (height: 1366px) and (orientation: portrait) {
     .survey {
-        background: none;
+        border-radius: 0;
+        background-color: none;
+        width: 80%;
     }
 
 
-    .gender-selection select {
-        font-size: 1rem;
-    }
-
-
-    .quiz,
-    .summary {
-        width: 90%;
-    }
-
-
-    .quiz-wrapper,
-    .summary-box {
-        width: 30%;
+    .quiz-wrapper {
+        width: 80%;
         border-radius: 5px;
         background-color: white;
     }
 
 
-    button {
-        margin-top: 1em;
+    .quiz {
+
+        padding: 2em 0;
+        border-radius: 5px;
+    }
+
+
+    article h2 {
+        font-size: 1.4rem;
+    }
+
+    article h3 {
+        font-size: 1.1rem;
+        margin: 0.7em 0 0.2em 0;
+    }
+
+    .alternativeAnswer label {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
