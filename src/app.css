@@ -360,6 +360,11 @@ button {
     }
 
 
+    .summary-box h1 {
+        font-size: 2rem;
+    }
+
+
     button {
         margin-top: 1em;
     }
