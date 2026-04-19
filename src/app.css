@@ -234,7 +234,7 @@ button {
 }
 
 
-/* Desktop: 1024px and larger */
+/* Desktop: 1024px - 1279px */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     h1 {
         font-size: 3rem;
@@ -293,7 +293,7 @@ button {
 /* Desktop: 1280px and larger */
 @media screen and (min-width: 1280px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
     }
 
 
@@ -350,6 +350,7 @@ button {
         width: 100%;
         border-radius: 5px;
         background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.397), 0 2px 6px rgba(0, 0, 0, 0.397);
     }
 
 
